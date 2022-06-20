@@ -331,7 +331,7 @@ class Game:
                     txt = 'You Lose!'
             self.win_status = txt
 
-        if self.start == False and self.replay == False and delay == 65 and self.run != []:
+        if self.start == False and self.replay == False and delay == 55 and self.run != []:
             self.flag_comp = True
 
             if self.run[-1] == 'stop':
