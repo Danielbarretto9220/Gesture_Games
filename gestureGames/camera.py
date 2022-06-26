@@ -6,7 +6,7 @@ from cvzone.HandTrackingModule import HandDetector
 class VideoCamera(object):
     def __init__(self):
         self.cap = cv2.VideoCapture(0)
-        self.mainobj = main(1)
+        self.mainobj = main(2)
         self.gameOn = True
     def __del__(self):
         self.cap.release()
@@ -23,7 +23,6 @@ class VideoCamera(object):
         if self.gameOn == False:
             #img = processed_frame
             cv2.rectangle(processed_frame, (0, 0), (640,480), (255,255,255), cv2.FILLED)
-            #cv2.rectangle(processed_frame, (150, 80),(500, 150),(255, 255, 255), cv2.FILLED)
             cv2.rectangle(processed_frame, (150, 80),(500, 150),(50, 50, 50), 3)
             cv2.putText(processed_frame, "Game Over !!", (160, 120), cv2.FONT_HERSHEY_PLAIN,3, (50, 50, 50), 3)
             #processed_frame = img
